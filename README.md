@@ -88,6 +88,8 @@ Current result: **all expected findings detected, zero false positives** on the 
 
 ## Roadmap
 
+Detailed plan with tasks and acceptance criteria: [ROADMAP.md](ROADMAP.md).
+
 - [x] Express route model + deviance-based A01 rules
 - [ ] NestJS adapter (guards, decorators, DI-resolved services)
 - [ ] Inter-procedural taint engine (A03: SQL/NoSQL/command injection)

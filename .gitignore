@@ -2,3 +2,7 @@ node_modules/
 dist/
 *.log
 .DS_Store
+
+# Claude Code / local assistant files (not published)
+CLAUDE.md
+.claude/
