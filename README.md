@@ -1,5 +1,7 @@
 # scanner
 
+[![CI](https://github.com/byKenVi/Security-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/byKenVi/Security-scanner/actions/workflows/ci.yml)
+
 **Static detection of broken access control (OWASP A01) in Node.js / TypeScript web apps — without writing a security policy first.**
 
 > Status: early development (v0.1). Express supported; NestJS next.
