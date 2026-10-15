@@ -24,7 +24,7 @@ A milestone is done only when its "Done when" criteria are met.
 - [ ] Pick the final project name; rename `scanner` in package names, CLI binary and README
 - [ ] Translate all CLI and finding messages to **English** (international audience: profs, GitHub)
 - [ ] Support `router.route("/x").get(...).put(...)` chains (+ fixture case)
-- [ ] GitHub Actions workflow: `pnpm install && pnpm typecheck && pnpm test` on every push/PR
+- [x] GitHub Actions workflow: `pnpm install && pnpm typecheck && pnpm test` on every push/PR
 - [ ] Push to `github.com/byKenVi/<name>`, add topics (`security`, `sast`, `owasp`, `express`, `nestjs`, `typescript`), pin it on the profile
 
 **Done when:** repo is public, CI badge is green, README renders cleanly.
