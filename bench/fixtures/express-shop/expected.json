@@ -1,0 +1,26 @@
+{
+  "fixture": "express-shop",
+  "framework": "express",
+  "routes": [
+    { "method": "GET",    "path": "/health",                    "authenticated": false, "roles": [],        "ownership": null },
+    { "method": "POST",   "path": "/auth/login",                "authenticated": false, "roles": [],        "ownership": null },
+    { "method": "GET",    "path": "/products/search",           "authenticated": false, "roles": [],        "ownership": null },
+    { "method": "GET",    "path": "/api/orders",                "authenticated": true,  "roles": [],        "ownership": "scoped-query" },
+    { "method": "GET",    "path": "/api/orders/:id",            "authenticated": true,  "roles": [],        "ownership": "comparison" },
+    { "method": "PUT",    "path": "/api/orders/:id",            "authenticated": true,  "roles": [],        "ownership": "comparison" },
+    { "method": "DELETE", "path": "/api/orders/:id",            "authenticated": true,  "roles": [],        "ownership": null },
+    { "method": "POST",   "path": "/api/users/register",        "authenticated": false, "roles": [],        "ownership": null },
+    { "method": "GET",    "path": "/api/users/me",              "authenticated": true,  "roles": [],        "ownership": "scoped-query" },
+    { "method": "GET",    "path": "/api/users/:id",             "authenticated": true,  "roles": [],        "ownership": null },
+    { "method": "PATCH",  "path": "/api/users/:id",             "authenticated": true,  "roles": [],        "ownership": "comparison" },
+    { "method": "GET",    "path": "/admin/users",               "authenticated": true,  "roles": ["admin"], "ownership": null },
+    { "method": "DELETE", "path": "/admin/users/:id",           "authenticated": true,  "roles": ["admin"], "ownership": null },
+    { "method": "POST",   "path": "/admin/users/:id/promote",   "authenticated": true,  "roles": [],        "ownership": null }
+  ],
+  "vulnerabilities": [
+    { "owasp": "A01", "rule": "missing-ownership-check", "method": "DELETE", "path": "/api/orders/:id" },
+    { "owasp": "A01", "rule": "missing-ownership-check", "method": "GET",    "path": "/api/users/:id" },
+    { "owasp": "A01", "rule": "missing-role-check",      "method": "POST",   "path": "/admin/users/:id/promote" },
+    { "owasp": "A03", "rule": "sql-injection",           "method": "GET",    "path": "/products/search" }
+  ]
+}

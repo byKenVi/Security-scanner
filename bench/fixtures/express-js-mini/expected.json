@@ -1,0 +1,13 @@
+{
+  "fixture": "express-js-mini",
+  "framework": "express",
+  "routes": [
+    { "method": "GET", "path": "/",              "authenticated": false, "roles": [],        "ownership": null },
+    { "method": "GET", "path": "/admin/stats",   "authenticated": true,  "roles": ["admin"], "ownership": null },
+    { "method": "GET", "path": "/notes/:noteId", "authenticated": true,  "roles": [],        "ownership": "comparison" },
+    { "method": "PUT", "path": "/notes/:noteId", "authenticated": true,  "roles": [],        "ownership": null }
+  ],
+  "vulnerabilities": [
+    { "owasp": "A01", "rule": "missing-ownership-check", "method": "PUT", "path": "/notes/:noteId" }
+  ]
+}

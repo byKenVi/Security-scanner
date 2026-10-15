@@ -1,0 +1,12 @@
+{
+  "name": "@scanner/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": { "scanner": "src/index.ts" },
+  "dependencies": {
+    "@scanner/core": "workspace:*",
+    "@scanner/adapter-express": "workspace:*",
+    "@scanner/analyzer-access-control": "workspace:*"
+  }
+}

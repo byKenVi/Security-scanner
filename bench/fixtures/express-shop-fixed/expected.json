@@ -1,0 +1,6 @@
+{
+  "fixture": "express-shop-fixed",
+  "framework": "express",
+  "description": "Même application que express-shop, avec les 4 failles corrigées. Sert à mesurer les faux positifs : aucune faille ne doit être signalée.",
+  "vulnerabilities": []
+}
